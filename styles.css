@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Card Container */
+.card-container {
+    perspective: 1000px;
+}
+
+/* Card */
+.card {
+    width: 350px;
+    height: 580px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.card:hover {
+    transform: rotateY(15deg) rotateX(5deg);
+}
+
+/* Card Header */
+.card-header {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    padding: 20px;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    animation: bounce 1.5s infinite alternate;
+}
+
+.circle:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.circle:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+/* Card Image */
+.card-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card Content */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Card Footer */
+.card-footer {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    background: #f9fafc;
+}
+
+.btn {
+    display: inline-block;
+    background: #0078ff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #005ecb;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    filter: grayscale(0%) brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+    filter: grayscale(0%) brightness(1.2);
+    transform: scale(1.2);
+}
