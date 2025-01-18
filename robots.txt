@@ -1,3 +1,3 @@
 User-agent: *
-Allow: /
+Disallow:
 Sitemap: https://msl.markmixstudios.com/sitemap.xml
